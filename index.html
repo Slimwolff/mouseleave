@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#shadow-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.act {
+    display: block !important;
+}
+</style>
+</head>
+<body>
+    <div id="newsletter">
+        <div class="r1">
+            <form action="a" method="post">
+                <div class="r2">
+                    <label for="name"></label>
+                    <input type="text" name="name">
+                </div>
+                <div class="r2">
+                    <label for="name">Email</label>
+                    <input type="text" name="name">
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+    <div id="shadow-box"></div>
+
+
+<script>
+    let shadowBox = document.getElementById('shadow-box');
+    document.addEventListener('mouseleave', (event)=> {
+        shadowBox.classList.add('act');
+    })
+</script>
+</body>
+</html>
